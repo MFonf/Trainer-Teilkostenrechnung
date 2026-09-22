@@ -120,7 +120,7 @@ function render(){
   const ans=box.querySelector('.answer');
   box.querySelector('.check').onclick=()=>{
    let correct=false,user='';
-   if(e.type==='num'){const raw=box.querySelector('.userAnswer').value.trim().replace(/\./g,'').replace(',','.'); const v=parseFloat(raw); user=v; const tol=(e.tol!==undefined)?e.tol:Math.max(0.01,Math.abs(e.ans)*0.0005); correct=!Number.isNaN(v)&&Math.abs(v-e.ans)<=tol;}
+   if(e.type==='num'){const rawInput=box.querySelector('.userAnswer').value.trim(); let normalized=rawInput; if(rawInput.includes(',')){normalized=rawInput.replace(/\./g,'').replace(',','.');} const v=parseFloat(normalized); user=v; const tol=(e.tol!==undefined)?e.tol:Math.max(0.01,Math.abs(e.ans)*0.0005); correct=!Number.isNaN(v)&&Math.abs(v-e.ans)<=tol;}
    if(e.type==='text'){user=box.querySelector('.userAnswer').value.trim().toLowerCase().replace(/\s+/g,' '); const expected=String(e.ans).toLowerCase(); correct=user===expected || user===expected.replace('produkt ','p');}
    if(e.type==='mc'){const s=box.querySelector('input[type=radio]:checked');user=s?+s.value:null;correct=user===e.ans;}
    state[e.id]={done:true,correct};save();
