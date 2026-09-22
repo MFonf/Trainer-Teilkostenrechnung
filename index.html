@@ -19,7 +19,7 @@ h2{margin-top:0}.tag{display:inline-block;background:var(--accent2);color:var(--
 .progress{height:10px;background:#e7eee9;border-radius:99px;overflow:hidden}.progress>div{height:100%;background:var(--accent);width:0}
 .exercise{margin-top:14px}.exercise h3{margin-bottom:6px}
 .answer{margin-top:10px;padding:12px;border-radius:12px;background:#f0f8f3;border-left:4px solid var(--accent);display:none}
-.answer.show{display:block}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.answer.show{display:block}.formula{font-size:1.08rem;background:#f0f8f3;padding:10px 12px;border-radius:10px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .primary{background:var(--accent);color:#fff}.secondary{background:#eaf1ed;color:var(--text)} .reset{background:#fff1f1;color:var(--danger);border:1px solid #f0cccc}
 input,select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;font:inherit}
 .quiz-options label{display:block;margin:7px 0;padding:10px;border:1px solid var(--border);border-radius:10px;background:#fbfdfb}
@@ -33,6 +33,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <nav><div class="navin">
 <button class="navbtn active" data-section="start">Start</button>
 <button class="navbtn" data-section="wissen">Wissen</button>
+<button class="navbtn" data-section="formeln">Formeln</button>
 <button class="navbtn" data-section="uebungen">Übungen</button>
 <button class="navbtn" data-section="bericht">Lernbericht</button>
 </div></nav>
@@ -53,6 +54,25 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><h3>Mehrproduktunternehmen</h3><p>DB I = Umsatzerlöse − variable Kosten. Danach werden erzeugnisfixe Kosten abgezogen → DB II; danach erzeugnisgruppenfixe Kosten → DB III; danach unternehmensfixe Kosten → Betriebsergebnis.</p><p>Bei einem Engpass wird der relative DB betrachtet.</p></div>
 <div class="card"><h3>Zusatzauftrag</h3><p>Bei freier Kapazität wird im Material der zusätzliche Deckungsbeitrag betrachtet. Im Beispiel mit 1.000 Zusatzstücken zu 55 € und 40 € variablen Kosten steigt der Gewinn um 15.000 €.</p></div>
 </div></section>
+<section id="formeln" class="hidden">
+<h2>Formelseite – alles auf einen Blick</h2>
+<p class="muted">Die wichtigsten Formeln aus den Lernmaterialien. Tipp: Bei Geldbeträgen auf die Einheiten achten und Zwischenergebnisse sauber runden.</p>
+<div class="grid grid2">
+<div class="card"><span class="tag">Deckungsbeitrag</span><h3>Stückdeckungsbeitrag</h3><p class="formula"><b>DB je Stück = Verkaufspreis − variable Stückkosten</b></p><p>Der Stück-DB zeigt, wie viel ein Stück zur Deckung der Fixkosten beiträgt.</p></div>
+<div class="card"><span class="tag">Deckungsbeitrag</span><h3>Gesamtdeckungsbeitrag</h3><p class="formula"><b>Gesamt-DB = DB je Stück × Absatzmenge</b></p><p>Alternativ: Umsatzerlöse − gesamte variable Kosten.</p></div>
+<div class="card"><span class="tag">Break-even</span><h3>Gewinnschwellenmenge</h3><p class="formula"><b>Break-even-Menge = Fixkosten / DB je Stück</b></p><p>Am Break-even-Point sind Erlöse und Gesamtkosten gleich hoch.</p></div>
+<div class="card"><span class="tag">Break-even</span><h3>Mindestumsatz</h3><p class="formula"><b>Mindestumsatz = Break-even-Menge × Verkaufspreis</b></p><p>Damit werden die Selbstkosten gerade gedeckt.</p></div>
+<div class="card"><span class="tag">Kostenfunktion</span><h3>Gesamtkosten</h3><p class="formula"><b>K(x) = Fixkosten + variable Stückkosten × Menge</b></p><p>Beispiel aus dem Material: 4.000 € + 0,30 € × 16.850 km.</p></div>
+<div class="card"><span class="tag">Kostenfunktion</span><h3>Variable Stückkosten</h3><p class="formula"><b>kv = Veränderung der Gesamtkosten / Veränderung der Menge</b></p><p>Damit lassen sich bei zwei bekannten Kosten-Mengen-Paaren die variablen Stückkosten bestimmen.</p></div>
+<div class="card"><span class="tag">Relativer DB</span><h3>Relativer Deckungsbeitrag</h3><p class="formula"><b>Relativer DB = Stück-DB / Engpassverbrauch je Stück</b></p><p>Zum Beispiel: DB je Stück geteilt durch benötigte Produktionsminuten.</p></div>
+<div class="card"><span class="tag">Preisuntergrenze</span><h3>Kurzfristige Preisuntergrenze</h3><p class="formula"><b>kurzfristige Preisuntergrenze = variable Stückkosten</b></p><p>So ist es in den bereitgestellten Materialien dargestellt.</p></div>
+<div class="card"><span class="tag">Preisuntergrenze</span><h3>Langfristige Preisuntergrenze</h3><p class="formula"><b>langfristige Preisuntergrenze = (variable Gesamtkosten + Fixkosten) / Menge</b></p><p>Sie entspricht in der Übung den gesamten Stückkosten.</p></div>
+<div class="card"><span class="tag">Maschinenvergleich</span><h3>Kritische Menge</h3><p class="formula"><b>Fixkosten I + kv I × x = Fixkosten II + kv II × x</b></p><p>Die kritische Menge ist die Produktionsmenge, bei der beide Alternativen gleich hohe Kosten verursachen.</p></div>
+<div class="card"><span class="tag">Mehrproduktunternehmen</span><h3>Stufenweise Deckungsbeitragsrechnung</h3><p class="formula"><b>DB I = Umsatzerlöse − variable Kosten</b></p><p><b>DB II = DB I − Erzeugnisfixkosten</b><br><b>DB III = DB II − Erzeugnisgruppenfixkosten</b><br><b>Betriebsergebnis = DB III − Unternehmensfixkosten</b></p></div>
+<div class="card"><span class="tag">Zusatzauftrag</span><h3>Zusätzlicher Deckungsbeitrag</h3><p class="formula"><b>Zusatz-DB = (Zusatzpreis − variable Stückkosten) × Zusatzmenge</b></p><p>Bei freier Kapazität wird in der entsprechenden Übung der zusätzliche Deckungsbeitrag betrachtet.</p></div>
+</div>
+<div class="card" style="margin-top:16px"><span class="tag">Prüfungstipp</span><h3>Rechenweg</h3><ol><li>Gegebene Werte und Einheiten markieren.</li><li>Passende Formel auswählen.</li><li>Werte einsetzen.</li><li>Ergebnis mit Einheit angeben.</li><li>Bei Dezimalzahlen sind im Trainer Komma und Punkt zulässig.</li></ol></div>
+</section>
 <section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
 <section id="bericht" class="hidden">
 <div class="card"><h2>Dein Lernbericht</h2><p id="reportText">Noch keine Aufgaben bearbeitet.</p><div id="topicReport"></div><div class="controls"><button class="reset" id="resetBtn">Fortschritt zurücksetzen</button></div></div>
