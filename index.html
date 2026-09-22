@@ -19,7 +19,7 @@ h2{margin-top:0}.tag{display:inline-block;background:var(--accent2);color:var(--
 .progress{height:10px;background:#e7eee9;border-radius:99px;overflow:hidden}.progress>div{height:100%;background:var(--accent);width:0}
 .exercise{margin-top:14px}.exercise h3{margin-bottom:6px}
 .answer{margin-top:10px;padding:12px;border-radius:12px;background:#f0f8f3;border-left:4px solid var(--accent);display:none}
-.answer.show{display:block}.formula{font-size:1.08rem;background:#f0f8f3;padding:10px 12px;border-radius:10px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.answer.show{display:block}.formula{font-size:1.08rem;background:#f0f8f3;padding:10px 12px;border-radius:10px}.chain{background:#f8fbf9;border-left:4px solid var(--accent);padding:12px;border-radius:10px}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .primary{background:var(--accent);color:#fff}.secondary{background:#eaf1ed;color:var(--text)} .reset{background:#fff1f1;color:var(--danger);border:1px solid #f0cccc}
 input,select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;font:inherit}
 .quiz-options label{display:block;margin:7px 0;padding:10px;border:1px solid var(--border);border-radius:10px;background:#fbfdfb}
@@ -34,6 +34,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <button class="navbtn active" data-section="start">Start</button>
 <button class="navbtn" data-section="wissen">Wissen</button>
 <button class="navbtn" data-section="formeln">Formeln</button>
+<button class="navbtn" data-section="graphen">Graphenanalyse</button>
 <button class="navbtn" data-section="uebungen">Übungen</button>
 <button class="navbtn" data-section="bericht">Lernbericht</button>
 </div></nav>
@@ -72,6 +73,21 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><span class="tag">Zusatzauftrag</span><h3>Zusätzlicher Deckungsbeitrag</h3><p class="formula"><b>Zusatz-DB = (Zusatzpreis − variable Stückkosten) × Zusatzmenge</b></p><p>Bei freier Kapazität wird in der entsprechenden Übung der zusätzliche Deckungsbeitrag betrachtet.</p></div>
 </div>
 <div class="card" style="margin-top:16px"><span class="tag">Prüfungstipp</span><h3>Rechenweg</h3><ol><li>Gegebene Werte und Einheiten markieren.</li><li>Passende Formel auswählen.</li><li>Werte einsetzen.</li><li>Ergebnis mit Einheit angeben.</li><li>Bei Dezimalzahlen sind im Trainer Komma und Punkt zulässig.</li></ol></div>
+</section>
+<section id="graphen" class="hidden">
+<h2>Graphenanalyse</h2>
+<p class="muted">Dieser Bereich übernimmt die zentralen Inhalte aus der bereitgestellten PowerPoint „Graphen der Deckungsbeitragsrechnung“. Die Begriffe und Wirkungsketten sind dabei bewusst nah am Unterrichtsmaterial gehalten.</p>
+<div class="grid grid2">
+<div class="card"><span class="tag">1 · Gewinnschwelle</span><h3>Gewinnfunktion</h3><p class="formula"><b>G(x) = DB je Stück × x − Fixkosten</b></p><p>Die Gewinnschwelle ist die Nullstelle der Gewinnfunktion. Dort ist der Gewinn 0. Oberhalb liegt laut Material der Gewinnbereich, unterhalb der Verlustbereich.</p></div>
+<div class="card"><span class="tag">2 · Kostenfunktion</span><h3>Gesamtkosten</h3><p class="formula"><b>K(x) = kv × x + Kf</b></p><p>Die Kostenfunktion setzt sich aus variablen Kosten und fixen Kosten zusammen. Die fixen Kosten bestimmen den Ausgangswert der Geraden.</p></div>
+<div class="card"><span class="tag">3 · Erlösfunktion</span><h3>Erlöse</h3><p class="formula"><b>E(x) = p × x</b></p><p>Bei einem konstanten Stückpreis steigt der Erlös proportional mit der Absatzmenge.</p></div>
+<div class="card"><span class="tag">4 · Gewinnfunktion</span><h3>Gewinn und Verlust</h3><p class="formula"><b>G(x) = DB × x − Kf</b></p><p>Die Gewinnfunktion zeigt, ab welcher Absatzmenge das Unternehmen die Gewinnschwelle überschreitet.</p></div>
+<div class="card"><span class="tag">5 · Fixkosten</span><h3>Parallelverschiebung</h3><p><b>Fixkosten steigen → Gewinnfunktion verschiebt sich nach unten → Gewinnschwelle tritt später ein.</b></p><p>Die Absatzmenge muss sich erhöhen, um die höheren Fixkosten zu decken.</p></div>
+<div class="card"><span class="tag">6 · Graphen lesen</span><h3>Worauf achten?</h3><ul><li>Wo schneiden sich Erlös- und Kostenfunktion?</li><li>Wo liegt die Gewinnschwelle?</li><li>Welche Bereiche zeigen Gewinn bzw. Verlust?</li><li>Wie verändern sich Steigung und Lage der Geraden?</li></ul></div>
+</div>
+<div class="card" style="margin-top:16px"><span class="tag">Wirkungskette aus der PowerPoint</span><h3>Preiserhöhung</h3><p class="chain"><b>Preis steigt</b> → Stückdeckungsbeitrag steigt → Gewinnschwelle wird früher erreicht → fixe Kosten werden bei kleinerer Absatzmenge gedeckt → Gewinngraph steigt stärker an → Kostenfunktion bleibt unverändert → Erlösfunktionsgraph ist steiler.</p></div>
+<div class="card" style="margin-top:16px"><span class="tag">Wirkungskette aus der PowerPoint</span><h3>Fixkostenerhöhung</h3><p class="chain"><b>Fixe Gesamtkosten steigen</b> → Parallelverschiebung der Kostenfunktion nach oben → Gewinnschwelle tritt später ein → größere Absatzmenge nötig, um die Kosten zu decken.</p></div>
+<div class="card" style="margin-top:16px"><span class="tag">Prüfungstraining</span><h3>Graphenanalyse in 4 Schritten</h3><ol><li><b>Achsen prüfen:</b> Was steht auf x- und y-Achse?</li><li><b>Geraden erkennen:</b> Kosten-, Erlös- oder Gewinnfunktion?</li><li><b>Schnitt-/Nullpunkt suchen:</b> Wo liegt die Gewinnschwelle?</li><li><b>Änderung erklären:</b> Was passiert bei Preis-, variablen Kosten- oder Fixkostenänderungen?</li></ol></div>
 </section>
 <section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
 <section id="bericht" class="hidden">
