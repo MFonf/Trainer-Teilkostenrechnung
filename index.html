@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teilkosten-Trainer – Lernwerkstatt</title>
+<style>
+:root{--bg:#f4f8f5;--card:#fff;--text:#163126;--muted:#5d6d65;--accent:#1f7a4d;--accent2:#dff1e6;--border:#d7e4dc;--danger:#b74343;--ok:#2b7a47;--shadow:0 8px 24px rgba(22,49,38,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header{background:linear-gradient(135deg,#1f7a4d,#4ca36f);color:#fff;padding:28px 16px} .wrap{max-width:1050px;margin:auto;padding:0 16px}
+header h1{margin:0 0 6px;font-size:clamp(1.8rem,4vw,2.8rem)} header p{margin:0;opacity:.95}
+nav{position:sticky;top:0;z-index:10;background:#ffffffee;backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+nav .navin{display:flex;gap:8px;overflow:auto;padding:10px 16px;max-width:1050px;margin:auto}
+button,.navbtn{font:inherit;border:0;border-radius:12px;padding:10px 14px;cursor:pointer}
+.navbtn{background:#edf5f0;color:var(--text)} .navbtn.active{background:var(--accent);color:#fff}
+main{padding:24px 0 60px}.grid{display:grid;gap:16px}.grid2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:18px}
+h2{margin-top:0}.tag{display:inline-block;background:var(--accent2);color:var(--accent);padding:4px 9px;border-radius:999px;font-size:.85rem;font-weight:700}
+.progress{height:10px;background:#e7eee9;border-radius:99px;overflow:hidden}.progress>div{height:100%;background:var(--accent);width:0}
+.exercise{margin-top:14px}.exercise h3{margin-bottom:6px}
+.answer{margin-top:10px;padding:12px;border-radius:12px;background:#f0f8f3;border-left:4px solid var(--accent);display:none}
+.answer.show{display:block}.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.primary{background:var(--accent);color:#fff}.secondary{background:#eaf1ed;color:var(--text)} .reset{background:#fff1f1;color:var(--danger);border:1px solid #f0cccc}
+input,select{width:100%;padding:10px;border:1px solid var(--border);border-radius:10px;font:inherit}
+.quiz-options label{display:block;margin:7px 0;padding:10px;border:1px solid var(--border);border-radius:10px;background:#fbfdfb}
+small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
+.hidden{display:none!important}.footer{text-align:center;color:var(--muted);padding:30px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><h1>Teilkosten-Trainer</h1><p>Interaktive Lernwerkstatt für Industriekaufleute – mit Übungen, Lösungen und Lernbericht.</p></div></header>
+<nav><div class="navin">
+<button class="navbtn active" data-section="start">Start</button>
+<button class="navbtn" data-section="wissen">Wissen</button>
+<button class="navbtn" data-section="uebungen">Übungen</button>
+<button class="navbtn" data-section="bericht">Lernbericht</button>
+</div></nav>
+<main class="wrap">
+<section id="start">
+<div class="grid grid2">
+<div class="card"><span class="tag">So funktioniert's</span><h2>Schritt für Schritt lernen</h2><p>Arbeite die kurzen Wissensbausteine durch und löse danach Übungen in verschiedenen Schwierigkeitsstufen.</p><p>Nach jeder Aufgabe kannst du mit <b>Kontrollieren</b> die Lösung und eine Erklärung anzeigen.</p></div>
+<div class="card"><span class="tag">Dein Fortschritt</span><h2 id="startScore">0 von 18 Aufgaben</h2><div class="progress"><div id="startProgress"></div></div><p class="muted">Der Fortschritt wird auf diesem Gerät gespeichert.</p></div>
+</div>
+</section>
+<section id="wissen" class="hidden">
+<h2>Wissen kompakt</h2>
+<div class="grid grid2">
+<div class="card"><h3>Deckungsbeitrag</h3><p><b>Deckungsbeitrag je Stück = Verkaufspreis − variable Kosten je Stück.</b></p><p>Der Deckungsbeitrag trägt zur Deckung der Fixkosten bei.</p></div>
+<div class="card"><h3>Break-even-Point</h3><p>Am Break-even-Point sind Erlöse und Gesamtkosten gleich hoch. Unterhalb entsteht ein Verlust, oberhalb ein Gewinn.</p><p><b>Break-even-Menge = Fixkosten / Deckungsbeitrag je Stück.</b></p></div>
+<div class="card"><h3>Relativer Deckungsbeitrag</h3><p>Bei einem Engpass wird der Deckungsbeitrag auf die knappe Ressource bezogen, z. B. pro Produktionsminute.</p><p><b>Relativer DB = Stück-DB / Engpassverbrauch je Stück.</b></p></div>
+<div class="card"><h3>Kurzfristige Preisuntergrenze</h3><p>In den Übungen des Materials entspricht die kurzfristige Preisuntergrenze den <b>variablen Stückkosten</b>.</p></div>
+<div class="card"><h3>Mehrproduktunternehmen</h3><p>Die stufenweise Deckungsbeitragsrechnung geht von DB I über produktbezogene Fixkosten und weitere Fixkostenstufen bis zum Betriebsergebnis.</p></div>
+<div class="card"><h3>Zusatzauftrag</h3><p>Ist freie Kapazität vorhanden und sind die zusätzlichen Erlöse höher als die zusätzlichen variablen Kosten, kann der Zusatzauftrag einen positiven zusätzlichen Deckungsbeitrag liefern.</p></div>
+</div></section>
+<section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
+<section id="bericht" class="hidden">
+<div class="card"><h2>Dein Lernbericht</h2><p id="reportText">Noch keine Aufgaben bearbeitet.</p><div id="topicReport"></div><div class="controls"><button class="reset" id="resetBtn">Fortschritt zurücksetzen</button></div></div>
+</section>
+</main>
+<div class="footer">Teilkosten-Trainer · Lernstand lokal auf dem Gerät gespeichert</div>
+<script>
+const exercises=[
+{id:1,level:'Basis',topic:'Grundlagen',q:'Berechne den Deckungsbeitrag je Stück bei einem Verkaufspreis von 10,50 € und variablen Stückkosten von 4,20 €.',type:'num',ans:6.30,unit:'€',exp:'10,50 € − 4,20 € = 6,30 € Deckungsbeitrag je Stück.'},
+{id:2,level:'Basis',topic:'Break-Even',q:'Gegeben: Fixkosten 240.282 €, variabler Stückkostenanteil 4,20 €, Verkaufspreis 10,50 €. Wie hoch ist die Gewinnschwellenmenge?',type:'num',ans:38299,unit:'Stück',tol:1,exp:'DB je Stück = 10,50 − 4,20 = 6,30 €. Break-even = 240.282 / 6,30 ≈ 38.140 Stück. Rechenergebnis bitte auf ganze Stück runden.'},
+{id:3,level:'Basis',topic:'Deckungsbeitrag',q:'Ein Produkt erzielt 54.000 Stück Absatz. Mit einem DB von 6,30 € je Stück: Wie hoch ist der Gesamtdeckungsbeitrag?',type:'num',ans:340200,unit:'€',exp:'54.000 × 6,30 € = 340.200 €.'},
+{id:4,level:'Aufbau',topic:'Kostenfunktionen',q:'Ein Fahrzeug verursacht 4.000 € fixe Jahreskosten und 0,30 € variable Kosten je km. Wie hoch sind die Gesamtkosten bei 16.850 km?',type:'num',ans:9055,unit:'€',exp:'4.000 € + 0,30 € × 16.850 km = 9.055 €.'},
+{id:5,level:'Basis',topic:'Relativer DB',q:'Welches Produkt hat bei den Werten (Preis; variable Kosten; Minuten) den höchsten relativen Deckungsbeitrag? Produkt 1: 24;18;10 · Produkt 2: 32;25;20 · Produkt 3: 25;12;30 · Produkt 4: 45;39;15 · Produkt 5: 50;30;40',type:'text',ans:'Produkt 1',exp:'Produkt 1: (24−18)/10 = 0,60 €/min. Das ist höher als die anderen Produkte.'},
+{id:6,level:'Aufbau',topic:'Break-Even',q:'Textilwerke AG: Fixkosten 145.000 €, Verkaufspreis 14,75 €, variable Stückkosten 7,50 €. Berechne die Break-even-Menge.',type:'num',ans:20000,unit:'Stück',exp:'DB je Stück = 14,75 − 7,50 = 7,25 €. 145.000 / 7,25 = 20.000 Stück.'},
+{id:7,level:'Aufbau',topic:'Deckungsbeitrag',q:'Küchengerät A: Preis 62 €, variable Kosten 39,70 €. Wie hoch ist der DB je Stück?',type:'num',ans:22.30,unit:'€',exp:'62,00 − 39,70 = 22,30 €.'},
+{id:8,level:'Aufbau',topic:'Deckungsbeitrag',q:'Für Produkt A werden 2.900 Stück hergestellt. DB je Stück: 22,30 €. Gesamt-DB?',type:'num',ans:64670,unit:'€',exp:'2.900 × 22,30 € = 64.670 €.'},
+{id:9,level:'Prüfung',topic:'Fixkosten',q:'Welche Aussage ist richtig?',type:'mc',opts:['Fixkosten ändern sich immer proportional zur Absatzmenge.','Fixkosten bleiben innerhalb eines relevanten Beschäftigungsbereichs insgesamt weitgehend konstant.','Variable Kosten sind unabhängig von der Ausbringungsmenge.','Der Break-even-Point liegt immer bei Null.'],ans:1,exp:'Fixkosten bleiben im relevanten Beschäftigungsbereich insgesamt konstant.'},
+{id:10,level:'Prüfung',topic:'Preisuntergrenze',q:'Welche Größe entspricht in den Übungen der kurzfristigen Preisuntergrenze?',type:'mc',opts:['Fixkosten je Stück','Variable Stückkosten','Gesamtkosten je Stück','Deckungsbeitrag je Stück'],ans:1,exp:'In den Materialien ist die kurzfristige Preisuntergrenze mit den variablen Stückkosten verbunden.'},
+{id:11,level:'Prüfung',topic:'Kostenveränderungen',q:'Was passiert bei höheren Fixkosten (sonst unverändert)?',type:'mc',opts:['Die Break-even-Menge steigt.','Die Break-even-Menge sinkt.','Der DB je Stück steigt automatisch.','Die variablen Stückkosten sinken automatisch.'],ans:0,exp:'Mehr Fixkosten müssen durch Deckungsbeiträge gedeckt werden; deshalb steigt die Break-even-Menge.'},
+{id:12,level:'Prüfung',topic:'Kostenveränderungen',q:'Was passiert bei höheren variablen Stückkosten (sonst unverändert)?',type:'mc',opts:['Der DB je Stück steigt.','Der DB je Stück sinkt und die Break-even-Menge steigt.','Die Fixkosten sinken.','Der Break-even entfällt.'],ans:1,exp:'Höhere variable Kosten verringern den Stück-DB. Dadurch werden mehr Stück für den Break-even benötigt.'},
+{id:13,level:'Aufbau',topic:'Maschinenvergleich',q:'Maschine I: 1,50 € variable Kosten/Stück und 1.800 € Fixkosten. Maschine II: 1,10 € variable Kosten/Stück und 2.200 € Fixkosten. Bei welcher Menge sind die Kosten gleich?',type:'num',ans:1000,unit:'Stück',exp:'1.800 + 1,50x = 2.200 + 1,10x → 0,40x = 400 → x = 1.000.'},
+{id:14,level:'Aufbau',topic:'Relativer DB',q:'Engpass: 15 Minuten pro Stück, DB 58 €. Wie hoch ist der relative DB je Minute?',type:'num',ans:3.8666666667,unit:'€/min',tol:.02,exp:'58 € / 15 min ≈ 3,87 €/min.'},
+{id:15,level:'Prüfung',topic:'Zusatzauftrag',q:'Ein Zusatzauftrag bringt 55 € Verkaufspreis je Stück und verursacht 40 € variable Kosten je Stück. Es ist freie Kapazität vorhanden. Wie hoch ist der zusätzliche DB je Stück?',type:'num',ans:15,unit:'€',exp:'55 − 40 = 15 € zusätzlicher DB je Stück.'},
+{id:16,level:'Basis',topic:'Mehrproduktunternehmen',q:'Was beschreibt der Deckungsbeitrag II?',type:'mc',opts:['DB I minus produktbezogene Fixkosten','Umsatz minus alle Fixkosten','Nur variable Kosten','Umsatz plus Fixkosten'],ans:0,exp:'In der stufenweisen Rechnung werden nach DB I produktbezogene Fixkosten abgezogen, um DB II zu erhalten.'},
+{id:17,level:'Prüfung',topic:'Fixkostenarten',q:'Welche Kostenart ist laut Material typischerweise produktbezogen?',type:'mc',opts:['Produktbezogene Werbung','Allgemeine Geschäftsleitung','Bewachung des Betriebsgeländes','Unternehmensabgabe'],ans:0,exp:'Produktbezogene Werbung wird in den Materialien als Beispiel für Erzeugnisfixkosten genannt.'},
+{id:18,level:'Prüfung',topic:'Zusatzauftrag',q:'Welche Aussage ist bei einem Zusatzauftrag mit freier Kapazität grundsätzlich passend?',type:'mc',opts:['Er muss immer abgelehnt werden.','Er ist sinnvoll, wenn der zusätzliche Deckungsbeitrag positiv ist und die Voraussetzungen des Auftrags erfüllt sind.','Er erhöht automatisch die Fixkosten.','Er spielt bei der Teilkostenrechnung keine Rolle.'],ans:1,exp:'Bei freier Kapazität kann ein Zusatzauftrag einen positiven zusätzlichen Deckungsbeitrag liefern.'}
+];
+const state=JSON.parse(localStorage.getItem('teilkostenTrainer')||'{}');
+function save(){localStorage.setItem('teilkostenTrainer',JSON.stringify(state));updateProgress()}
+function updateProgress(){
+ const done=Object.values(state).filter(v=>v&&v.done).length;
+ const correct=Object.values(state).filter(v=>v&&v.done&&v.correct).length;
+ document.getElementById('startScore').textContent=done+' von '+exercises.length+' Aufgaben · '+correct+' richtig';
+ document.getElementById('startProgress').style.width=(done/exercises.length*100)+'%';
+}
+function fmt(v){return new Intl.NumberFormat('de-DE',{maximumFractionDigits:2}).format(v)}
+function render(){
+ const root=document.getElementById('exerciseList');root.innerHTML='';
+ exercises.forEach(e=>{
+  const box=document.createElement('div');box.className='card exercise';
+  let input='';
+  if(e.type==='num') input='<input type="number" step="any" class="userAnswer" placeholder="Deine Antwort">';
+  else if(e.type==='text') input='<input type="text" class="userAnswer" placeholder="Deine Antwort">';
+  else input='<div class="quiz-options">'+e.opts.map((o,i)=>'<label><input type="radio" name="q'+e.id+'" value="'+i+'"> '+o+'</label>').join('')+'</div>';
+  box.innerHTML='<span class="tag">'+e.level+' · '+e.topic+'</span><h3>Aufgabe '+e.id+'</h3><p>'+e.q+'</p>'+input+
+  '<div class="controls"><button class="primary check">Kontrollieren</button><button class="secondary clear">Zurücksetzen</button></div>'+
+  '<div class="answer"></div>';
+  root.appendChild(box);
+  const ans=box.querySelector('.answer');
+  box.querySelector('.check').onclick=()=>{
+   let correct=false,user='';
+   if(e.type==='num'){const v=parseFloat(box.querySelector('.userAnswer').value);user=v;correct=!Number.isNaN(v)&&Math.abs(v-e.ans)<=((e.tol!==undefined)?e.tol:0.01);}
+   if(e.type==='text'){user=box.querySelector('.userAnswer').value.trim().toLowerCase();correct=user===String(e.ans).toLowerCase();}
+   if(e.type==='mc'){const s=box.querySelector('input[type=radio]:checked');user=s?+s.value:null;correct=user===e.ans;}
+   state[e.id]={done:true,correct};save();
+   ans.innerHTML=(correct?'✅ <b>Richtig.</b> ':'❌ <b>Noch nicht.</b> ')+'<br>'+e.exp+(e.type==='num'?' <br><b>Lösung:</b> '+fmt(e.ans)+' '+(e.unit||''):'');
+   ans.classList.add('show');renderReport();
+  };
+  box.querySelector('.clear').onclick=()=>{box.querySelectorAll('input').forEach(x=>{if(x.type==='radio')x.checked=false;else x.value=''});ans.classList.remove('show')};
+ });
+}
+function renderReport(){
+ const done=Object.values(state).filter(v=>v&&v.done).length,correct=Object.values(state).filter(v=>v&&v.done&&v.correct).length;
+ const el=document.getElementById('reportText');
+ if(!done){el.textContent='Noch keine Aufgaben bearbeitet.';document.getElementById('topicReport').innerHTML='';return}
+ const pct=Math.round(correct/done*100);
+ el.innerHTML='Bearbeitet: <b>'+done+'</b> von '+exercises.length+' · Richtig: <b>'+correct+'</b> · Trefferquote: <b>'+pct+'%</b>';
+ const topics={};
+ exercises.forEach(e=>{if(state[e.id]?.done){topics[e.topic]??={done:0,correct:0};topics[e.topic].done++;if(state[e.id].correct)topics[e.topic].correct++;}});
+ document.getElementById('topicReport').innerHTML='<h3>Themenübersicht</h3>'+Object.entries(topics).map(([t,v])=>'<div class="reportbar"><b>'+t+'</b>: '+v.correct+'/'+v.done+' richtig<div class="progress"><div style="width:'+(v.correct/v.done*100)+'%"></div></div></div>').join('');
+}
+document.querySelectorAll('.navbtn').forEach(b=>b.onclick=()=>{document.querySelectorAll('.navbtn').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(b.dataset.section).classList.remove('hidden');if(b.dataset.section==='bericht')renderReport()});
+document.getElementById('resetBtn').onclick=()=>{localStorage.removeItem('teilkostenTrainer');location.reload()};
+render();updateProgress();renderReport();
+</script>
+</body>
+</html>
