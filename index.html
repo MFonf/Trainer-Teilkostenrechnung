@@ -38,6 +38,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <button class="navbtn" data-section="prozesskosten">Prozesskosten</button>
 <button class="navbtn" data-section="targetcosting">Target Costing</button>
 <button class="navbtn" data-section="plankosten">Plankosten</button>
+<button class="navbtn" data-section="vollkosten">Vollkostenrechnung</button>
 <button class="navbtn" data-section="uebungen">Übungen</button>
 <button class="navbtn" data-section="bericht">Lernbericht</button>
 </div></nav>
@@ -144,6 +145,21 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 </div>
 <h3>Übungen zur Plankostenrechnung</h3><div id="planExerciseList"></div>
 </section>
+
+<section id="vollkosten" class="hidden">
+<h2>Vollkostenrechnung</h2>
+<p class="muted">Dieser Lernbereich orientiert sich an deinen LF-8-Unterlagen zur Kostenstellenrechnung, zum Betriebsabrechnungsbogen (BAB), zur Zuschlagskalkulation, zur Maschinenstundensatzrechnung und zur Kostenträgerzeitrechnung.</p>
+<div class="grid grid2">
+<div class="card"><span class="tag">1 · Betriebsabrechnungsbogen</span><h3>Gemeinkosten auf Kostenstellen verteilen</h3><p>Im BAB werden Gemeinkosten zunächst nach einem passenden Verteilungsschlüssel auf Kostenstellen verteilt. Beispiele: Gehälter nach Gehaltslisten, Miete nach Quadratmetern, Abschreibungen nach Anlagenwerten, Energie nach Verbrauch.</p><p><b>Kontrolle:</b> Die Summe der verteilten Gemeinkosten muss der Ausgangssumme entsprechen. Danach werden gegebenenfalls allgemeine Kostenstellen und Hilfskostenstellen auf andere Kostenstellen umgelegt.</p></div>
+<div class="card"><span class="tag">2 · Zuschlagssätze</span><h3>Gemeinkosten den Produkten zurechnen</h3><p class="formula"><b>MGK-Zuschlag = Material-GK ÷ Fertigungsmaterial × 100</b></p><p class="formula"><b>FGK-Zuschlag = Fertigungs-GK ÷ Fertigungslöhne × 100</b></p><p class="formula"><b>VwGK-/VtGK-Zuschlag = jeweilige Gemeinkosten ÷ Herstellkosten des Umsatzes × 100</b></p><p>Verwende stets die Bezugsgröße, die im konkreten Unterrichtsschema vorgegeben ist.</p></div>
+<div class="card"><span class="tag">3 · Maschinenstundensatz</span><h3>Maschinenabhängige Fertigungskosten</h3><p>Typische Kostenarten sind kalkulatorische Abschreibungen und Zinsen, Instandhaltung, Betriebsstoffe, Energie und anteilige Raumkosten.</p><p class="formula"><b>Maschinenstundensatz = jährliche maschinenabhängige Kosten ÷ Netto-Maschinenlaufstunden</b></p><p><b>Auftragskosten = Maschinenstundensatz × Maschinenstunden des Auftrags.</b> Im BAB werden Maschinenkosten und Restfertigungsgemeinkosten getrennt, wenn die Maschinenstundensatzrechnung verwendet wird.</p></div>
+<div class="card"><span class="tag">4 · Zuschlagskalkulation</span><h3>Vom Material zu den Selbstkosten</h3><ol><li>Fertigungsmaterial + Materialgemeinkosten = Materialkosten.</li><li>Fertigungslöhne + Fertigungsgemeinkosten (+ Maschinenkosten) = Fertigungskosten.</li><li>Materialkosten + Fertigungskosten = Herstellkosten der Erzeugung.</li><li>Bestandsveränderungen berücksichtigen = Herstellkosten des Umsatzes.</li><li>Herstellkosten des Umsatzes + Verwaltungs- und Vertriebsgemeinkosten = Selbstkosten des Umsatzes.</li></ol></div>
+<div class="card"><span class="tag">5 · Ergebnistabelle</span><h3>Gesamtkalkulation und Betriebsergebnis</h3><p>Die Ergebnistabelle fasst die Gesamtkalkulation in einer festen Reihenfolge zusammen. Mehrbestand wird von den Herstellkosten der Erzeugung abgezogen; Minderbestand wird addiert.</p><table><tr><th>Position</th><th>Beispiel</th></tr><tr><td>Materialkosten</td><td>230.000 €</td></tr><tr><td>Fertigungskosten</td><td>330.000 €</td></tr><tr><td>Herstellkosten der Erzeugung</td><td>560.000 €</td></tr><tr><td>− Mehrbestand</td><td>25.000 €</td></tr><tr><td>Herstellkosten des Umsatzes</td><td>535.000 €</td></tr><tr><td>+ Verwaltungs-GK (12 %)</td><td>64.200 €</td></tr><tr><td>+ Vertriebs-GK (5 %)</td><td>26.750 €</td></tr><tr><td>Selbstkosten des Umsatzes</td><td>625.950 €</td></tr><tr><td>Umsatzerlöse</td><td>700.000 €</td></tr><tr><td>Betriebsergebnis</td><td><b>74.050 € Gewinn</b></td></tr></table></div>
+<div class="card"><span class="tag">6 · Über- und Unterdeckung</span><h3>Ist- und Normalkosten vergleichen</h3><p>Ist-Zuschlagssätze schwanken beispielsweise durch Beschäftigung, Reparaturen oder Preisänderungen. Normal-Zuschlagssätze beruhen auf einem längeren Zeitraum.</p><p><b>Unterdeckung:</b> Ist-Gemeinkosten liegen über den verrechneten Normal-Gemeinkosten. <b>Überdeckung:</b> Ist-Gemeinkosten liegen darunter.</p><p class="formula"><b>Abweichung = Ist-Gemeinkosten − Normal-Gemeinkosten</b></p></div>
+</div>
+<div class="card" style="margin-top:16px"><span class="tag">Merkschema BAB</span><h3>So gehst du vor</h3><ol><li>Gemeinkostenarten und Gesamtbeträge erfassen.</li><li>Passende Verteilungsschlüssel anwenden und Kosten auf Kostenstellen verteilen.</li><li>Allgemeine und Hilfskostenstellen umlegen.</li><li>Endsummen der Hauptkostenstellen kontrollieren.</li><li>Zuschlagssätze mit den richtigen Bezugsgrößen berechnen.</li><li>Gemeinkosten in Kalkulation und Ergebnistabelle übernehmen.</li></ol></div>
+<h3>Übungen zur Vollkostenrechnung</h3><div id="vollExerciseList"></div>
+</section>
 <section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
 <section id="bericht" class="hidden">
 <div class="card"><h2>Dein Lernbericht</h2><p id="reportText">Noch keine Aufgaben bearbeitet.</p><div id="topicReport"></div><div class="controls"><button class="reset" id="resetBtn">Fortschritt zurücksetzen</button></div></div>
@@ -237,8 +253,24 @@ const exercises=[
 {id:80,level:'Prüfung',topic:'Plankostenrechnung – Vertiefung',q:'Bei 2.400 Iststunden betragen die Sollkosten 157.800 € und die Istkosten 170.000 €. Wie hoch ist die Verbrauchsabweichung nach der Formel Sollkosten minus Istkosten?',type:'num',ans:-12200,unit:'€',exp:'Verbrauchsabweichung = Sollkosten − Istkosten = 157.800 € − 170.000 € = −12.200 €. Die Istkosten liegen 12.200 € über den Sollkosten.'},
 {id:81,level:'Aufbau',topic:'Plankostenrechnung – Vertiefung',q:'Die Planbeschäftigung beträgt 3.000 Stunden. Die Beschäftigung steigt auf 107 %. Fixkosten: 69.000 €, variable Plankosten bei Planbeschäftigung: 111.000 €. Wie hoch sind die Sollkosten?',type:'num',ans:187770,unit:'€',exp:'Istbeschäftigung = 3.000 h × 107 % = 3.210 h. Sollkosten = 69.000 € + 111.000 € × 3.210 ÷ 3.000 = 69.000 € + 118.770 € = 187.770 €.'}
 
+,{id:82,level:'Basis',topic:'Vollkostenrechnung – BAB',q:'Die Materialgemeinkosten betragen 45.000 €, das Fertigungsmaterial 300.000 €. Wie hoch ist der MGK-Zuschlagssatz?',type:'num',ans:15,unit:'%',exp:'MGK-Zuschlag = Materialgemeinkosten ÷ Fertigungsmaterial × 100 = 45.000 ÷ 300.000 × 100 = 15 %.'},
+{id:83,level:'Basis',topic:'Vollkostenrechnung – BAB',q:'Die Fertigungsgemeinkosten betragen 96.000 €, die Fertigungslöhne 80.000 €. Berechne den FGK-Zuschlagssatz.',type:'num',ans:120,unit:'%',exp:'FGK-Zuschlag = 96.000 ÷ 80.000 × 100 = 120 %.'},
+{id:84,level:'Aufbau',topic:'Vollkostenrechnung – BAB',q:'Die Verwaltungsgemeinkosten betragen 42.000 €. Die Herstellkosten des Umsatzes betragen 350.000 €. Wie hoch ist der VwGK-Zuschlagssatz?',type:'num',ans:12,unit:'%',exp:'VwGK-Zuschlag = 42.000 ÷ 350.000 × 100 = 12 %.'},
+{id:85,level:'Aufbau',topic:'Vollkostenrechnung – BAB',q:'Die Vertriebsgemeinkosten betragen 21.000 €. Die Herstellkosten des Umsatzes betragen 350.000 €. Wie hoch ist der VtGK-Zuschlagssatz?',type:'num',ans:6,unit:'%',exp:'VtGK-Zuschlag = 21.000 ÷ 350.000 × 100 = 6 %.'},
+{id:86,level:'Basis',topic:'Vollkostenrechnung – BAB',q:'Energiekosten von 100.000 € werden nach Verbrauch verteilt. Material benötigt 20 %, Fertigung 30 %, Verwaltung 20 % und Vertrieb 30 %. Wie viel wird der Fertigung zugerechnet?',type:'num',ans:30000,unit:'€',exp:'100.000 € × 30 % = 30.000 € werden der Fertigung zugerechnet.'},
+{id:87,level:'Aufbau',topic:'Vollkostenrechnung – BAB',q:'Die Kosten der allgemeinen Kostenstelle betragen 12.000 € und werden nach Fläche verteilt. Material: 60 m², Fertigung: 90 m², Verwaltung: 150 m². Wie hoch ist die Umlage an die Fertigung?',type:'num',ans:3600,unit:'€',exp:'Gesamtfläche = 60 + 90 + 150 = 300 m². Fertigungsanteil = 90 ÷ 300 = 30 %. Umlage = 12.000 € × 30 % = 3.600 €.'},
+{id:88,level:'Basis',topic:'Vollkostenrechnung – BAB',q:'Auf eine Kostenstelle entfallen 40.000 € Gehälter, 60.000 € Abschreibungen, 30.000 € Miete und 20.000 € Instandhaltung. Wie hoch ist die Summe der Gemeinkosten?',type:'num',ans:150000,unit:'€',exp:'40.000 + 60.000 + 30.000 + 20.000 = 150.000 €.'},
+{id:89,level:'Aufbau',topic:'Vollkostenrechnung – Maschinenstundensatz',q:'Die jährlichen maschinenabhängigen Kosten betragen 72.000 €. Die Netto-Maschinenlaufzeit beträgt 1.200 Stunden. Berechne den Maschinenstundensatz.',type:'num',ans:60,unit:'€/Stunde',exp:'Maschinenstundensatz = 72.000 € ÷ 1.200 Stunden = 60 € je Maschinenstunde.'},
+{id:90,level:'Aufbau',topic:'Vollkostenrechnung – Maschinenstundensatz',q:'Eine Maschine läuft 48 Wochen pro Jahr an 5 Tagen pro Woche, 2 Schichten pro Tag und 8 Stunden je Schicht. Es werden 240 Stunden Ausfallzeit abgezogen. Wie viele Netto-Maschinenstunden ergeben sich?',type:'num',ans:3600,unit:'Stunden',exp:'Bruttolaufzeit = 48 × 5 × 2 × 8 = 3.840 Stunden. Netto-Laufzeit = 3.840 − 240 = 3.600 Stunden.'},
+{id:91,level:'Prüfung',topic:'Vollkostenrechnung – Zuschlagskalkulation',q:'Sonderauftrag: Fertigungsmaterial 230 €, MGK 25 %, Fertigungslöhne 2,5 h × 42 €, Rest-FGK 80 % der Fertigungslöhne, Maschineneinsatz 3 h × 16,12 €. VwGK und VtGK betragen zusammen 35 % der Herstellkosten. Berechne die Selbstkosten.',type:'num',ans:708.56,unit:'€',tol:.02,exp:'MGK = 230 × 25 % = 57,50 €. Fertigungslöhne = 2,5 × 42 = 105 €. Rest-FGK = 105 × 80 % = 84 €. Maschinenkosten = 3 × 16,12 = 48,36 €. Herstellkosten = 230 + 57,50 + 105 + 84 + 48,36 = 524,86 €. VwGK/VtGK = 524,86 × 35 % = 183,70 €. Selbstkosten = 708,56 €.'},
+{id:92,level:'Aufbau',topic:'Vollkostenrechnung – Ergebnistabelle',q:'Fertigungsmaterial 200.000 €, MGK 30.000 €, Fertigungslöhne 150.000 €, FGK 180.000 €. Wie hoch sind die Herstellkosten der Erzeugung?',type:'num',ans:560000,unit:'€',exp:'Materialkosten = 200.000 + 30.000 = 230.000 €. Fertigungskosten = 150.000 + 180.000 = 330.000 €. Herstellkosten der Erzeugung = 230.000 + 330.000 = 560.000 €.'},
+{id:93,level:'Aufbau',topic:'Vollkostenrechnung – Ergebnistabelle',q:'Die Herstellkosten der Erzeugung betragen 560.000 €. Es liegt ein Mehrbestand von 25.000 € vor. Wie hoch sind die Herstellkosten des Umsatzes?',type:'num',ans:535000,unit:'€',exp:'Bei Mehrbestand wurden mehr Produkte hergestellt als verkauft. Daher werden die Herstellkosten des Mehrbestands abgezogen: 560.000 − 25.000 = 535.000 €.'},
+{id:94,level:'Prüfung',topic:'Vollkostenrechnung – Ergebnistabelle',q:'Herstellkosten des Umsatzes: 535.000 €. VwGK-Zuschlag: 12 %, VtGK-Zuschlag: 5 %, beide bezogen auf die Herstellkosten des Umsatzes. Wie hoch sind die Selbstkosten des Umsatzes?',type:'num',ans:625950,unit:'€',exp:'VwGK = 535.000 × 12 % = 64.200 €. VtGK = 535.000 × 5 % = 26.750 €. Selbstkosten des Umsatzes = 535.000 + 64.200 + 26.750 = 625.950 €.'},
+{id:95,level:'Prüfung',topic:'Vollkostenrechnung – Ergebnistabelle',q:'Die Umsatzerlöse betragen 700.000 €, die Selbstkosten des Umsatzes 625.950 €. Wie hoch ist das Betriebsergebnis?',type:'num',ans:74050,unit:'€ Gewinn',exp:'Betriebsergebnis = Umsatzerlöse − Selbstkosten des Umsatzes = 700.000 − 625.950 = 74.050 €. Da das Ergebnis positiv ist, liegt ein Gewinn vor.'},
+{id:96,level:'Basis',topic:'Vollkostenrechnung – Über-/Unterdeckung',q:'Die Ist-Gemeinkosten betragen 9.200 €, die verrechneten Normal-Gemeinkosten 8.000 €. Wie hoch ist die Abweichung und handelt es sich um Über- oder Unterdeckung?',type:'mc',opts:['1.200 € Überdeckung','1.200 € Unterdeckung','1.200 € Gewinn','Keine Abweichung'],ans:1,exp:'Abweichung = Ist-Gemeinkosten − Normal-Gemeinkosten = 9.200 − 8.000 = 1.200 €. Die Istkosten liegen über den verrechneten Normalkosten: Es liegt eine Unterdeckung vor.'}
+
 ];
-const STORAGE_KEY='teilkostenTrainerV5'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+const STORAGE_KEY='teilkostenTrainerV6'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));updateProgress()}
 function updateProgress(){
  const done=Object.values(state).filter(v=>v&&v.done).length;
@@ -248,9 +280,9 @@ function updateProgress(){
 }
 function fmt(v){return new Intl.NumberFormat('de-DE',{maximumFractionDigits:2}).format(v)}
 function render(){
- ['exerciseList','processExerciseList','targetExerciseList','planExerciseList'].forEach(id=>document.getElementById(id).innerHTML='');
+ ['exerciseList','processExerciseList','targetExerciseList','planExerciseList','vollExerciseList'].forEach(id=>document.getElementById(id).innerHTML='');
  exercises.forEach(e=>{
-  const rootId=e.topic.startsWith('Prozesskostenrechnung')?'processExerciseList':e.topic==='Target Costing'?'targetExerciseList':e.topic==='Plankostenrechnung'?'planExerciseList':'exerciseList';
+  const rootId=e.topic.startsWith('Prozesskostenrechnung')?'processExerciseList':e.topic==='Target Costing'?'targetExerciseList':e.topic.startsWith('Plankostenrechnung')?'planExerciseList':e.topic.startsWith('Vollkostenrechnung')?'vollExerciseList':'exerciseList';
   const root=document.getElementById(rootId);
   const box=document.createElement('div');box.className='card exercise';
   let input='';
