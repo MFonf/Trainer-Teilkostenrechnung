@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teilkosten-Trainer – Lernwerkstatt</title>
+<title>Kostenrechnung – Interaktive Lernwerkstatt</title>
 <style>
 :root{--bg:#f4f8f5;--card:#fff;--text:#163126;--muted:#5d6d65;--accent:#1f7a4d;--accent2:#dff1e6;--border:#d7e4dc;--danger:#b74343;--ok:#2b7a47;--shadow:0 8px 24px rgba(22,49,38,.08)}
 *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
@@ -29,17 +29,17 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <!-- Korrigierte Materialversion -->
 </head>
 <body>
-<header><div class="wrap"><h1>Teilkosten-Trainer</h1><p>Interaktive Lernwerkstatt für Industriekaufleute – mit Übungen, Lösungen und Lernbericht.</p></div></header>
+<header><div class="wrap"><h1>Kostenrechnung</h1><p>Lernwerkstatt für Industriekaufleute · Hessen · verständliche Erklärungen, Formeln und geordnete Übungen.</p></div></header>
 <nav><div class="navin">
 <button class="navbtn active" data-section="start">Start</button>
-<button class="navbtn" data-section="wissen">Wissen</button>
+<button class="navbtn" data-section="wissen">Grundlagen</button>
 <button class="navbtn" data-section="formeln">Formeln</button>
 <button class="navbtn" data-section="graphen">Graphenanalyse</button>
-<button class="navbtn" data-section="prozesskosten">Prozesskosten</button>
+<button class="navbtn" data-section="prozesskosten">Prozesskostenrechnung</button>
 <button class="navbtn" data-section="targetcosting">Target Costing</button>
 <button class="navbtn" data-section="plankosten">Plankosten</button>
 <button class="navbtn" data-section="vollkosten">Vollkostenrechnung</button>
-<button class="navbtn" data-section="uebungen">Übungen</button>
+<button class="navbtn" data-section="uebungen">Alle Übungen</button>
 <button class="navbtn" data-section="bericht">Lernbericht</button>
 </div></nav>
 <main class="wrap">
@@ -76,6 +76,16 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><span class="tag">Mehrproduktunternehmen</span><h3>Stufenweise Deckungsbeitragsrechnung</h3><p class="formula"><b>DB I = Umsatzerlöse − variable Kosten</b></p><p><b>DB II = DB I − Erzeugnisfixkosten</b><br><b>DB III = DB II − Erzeugnisgruppenfixkosten</b><br><b>Betriebsergebnis = DB III − Unternehmensfixkosten</b></p></div>
 <div class="card"><span class="tag">Zusatzauftrag</span><h3>Zusätzlicher Deckungsbeitrag</h3><p class="formula"><b>Zusatz-DB = (Zusatzpreis − variable Stückkosten) × Zusatzmenge</b></p><p>Bei freier Kapazität wird in der entsprechenden Übung der zusätzliche Deckungsbeitrag betrachtet.</p></div>
 </div>
+
+<div class="card"><span class="tag">Prozesskostenrechnung</span><h3>Prozesskostensatz</h3><p class="formula"><b>Prozesskostensatz = Prozesskosten ÷ Anzahl der Kostentreiber</b></p><p class="formula"><b>Prozesskosten je Stück = (Prozessmenge × Prozesskostensatz) ÷ Produktionsmenge</b></p><p class="formula"><b>Vollständiger Satz = lmi-Anteil + umgelegter lmn-Anteil je Vorgang</b></p></div>
+<div class="card"><span class="tag">Prozesskostenrechnung</span><h3>Umlage lmn-Kosten</h3><p class="formula"><b>Umlageschlüssel = lmn-Kosten ÷ lmi-Kosten × 100</b></p><p>lmi-Kosten hängen von der Leistungsmenge ab; lmn-Kosten werden nach dem im Unterrichtsschema vorgegebenen Schlüssel umgelegt.</p></div>
+<div class="card"><span class="tag">Target Costing</span><h3>Zielkosten berechnen</h3><p class="formula"><b>Skonto = Listenverkaufspreis × Skontosatz</b></p><p class="formula"><b>Zielerlös = Listenverkaufspreis − Skonto</b></p><p class="formula"><b>Zielkosten = Zielerlös − Zielgewinn</b></p><p class="formula"><b>Kostensenkungsvolumen = Standard-Selbstkosten − Zielkosten</b></p></div>
+<div class="card"><span class="tag">Plankostenrechnung</span><h3>Plankosten und Sollkosten</h3><p class="formula"><b>Plankostenverrechnungssatz = Plankosten ÷ Planbeschäftigung</b></p><p class="formula"><b>Sollkosten = fixe Plankosten + variable Plankosten × Istbeschäftigung ÷ Planbeschäftigung</b></p><p class="formula"><b>Verrechnete Plankosten = Plankostenverrechnungssatz × Istbeschäftigung</b></p></div>
+<div class="card"><span class="tag">Plankostenrechnung</span><h3>Abweichungen nach dem Unterrichtsschema</h3><p class="formula"><b>Beschäftigungsabweichung = verrechnete Plankosten − Sollkosten</b></p><p class="formula"><b>Verbrauchsabweichung = Sollkosten − Istkosten</b></p><p>Ein negatives Ergebnis bedeutet nach dieser Vorzeichenkonvention, dass die Ist- bzw. verrechneten Kosten unter den Vergleichskosten liegen.</p></div>
+<div class="card"><span class="tag">Vollkostenrechnung · BAB</span><h3>Gemeinkostenzuschlagssätze</h3><p class="formula"><b>MGK-Zuschlag = Material-GK ÷ Fertigungsmaterial × 100</b></p><p class="formula"><b>FGK-Zuschlag = Fertigungs-GK ÷ Fertigungslöhne × 100</b></p><p class="formula"><b>VwGK-Zuschlag = Verwaltungs-GK ÷ Herstellkosten des Umsatzes × 100</b></p><p class="formula"><b>VtGK-Zuschlag = Vertriebs-GK ÷ Herstellkosten des Umsatzes × 100</b></p></div>
+<div class="card"><span class="tag">Vollkostenrechnung</span><h3>Maschinenstundensatz</h3><p class="formula"><b>Maschinenstundensatz = jährliche maschinenabhängige Kosten ÷ Netto-Maschinenlaufstunden</b></p><p class="formula"><b>Maschinenkosten eines Auftrags = Maschinenstundensatz × Maschinenstunden</b></p></div>
+<div class="card"><span class="tag">Vollkostenrechnung</span><h3>Herstell- und Selbstkosten</h3><p class="formula"><b>Materialkosten = Fertigungsmaterial + Material-GK</b></p><p class="formula"><b>Fertigungskosten = Fertigungslöhne + Fertigungs-GK (+ Maschinenkosten, falls getrennt)</b></p><p class="formula"><b>Herstellkosten der Erzeugung = Materialkosten + Fertigungskosten</b></p><p class="formula"><b>Herstellkosten des Umsatzes = Herstellkosten der Erzeugung − Mehrbestand + Minderbestand</b></p><p class="formula"><b>Selbstkosten des Umsatzes = Herstellkosten des Umsatzes + Verwaltungs-GK + Vertriebs-GK</b></p><p class="formula"><b>Betriebsergebnis = Umsatzerlöse − Selbstkosten des Umsatzes</b></p></div>
+<div class="card"><span class="tag">Vollkostenrechnung</span><h3>Über- und Unterdeckung</h3><p class="formula"><b>Abweichung = Ist-Gemeinkosten − verrechnete Normal-Gemeinkosten</b></p><p>Ist-Gemeinkosten höher als verrechnete Normal-Gemeinkosten: Unterdeckung. Ist-Gemeinkosten niedriger: Überdeckung.</p></div>
 <div class="card" style="margin-top:16px"><span class="tag">Prüfungstipp</span><h3>Rechenweg</h3><ol><li>Gegebene Werte und Einheiten markieren.</li><li>Passende Formel auswählen.</li><li>Werte einsetzen.</li><li>Ergebnis mit Einheit angeben.</li><li>Bei Dezimalzahlen sind im Trainer Komma und Punkt zulässig.</li></ol></div>
 </section>
 <section id="graphen" class="hidden">
@@ -117,7 +127,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <p>Für „Bezugsquellen ermitteln“: 3.000 € ÷ 80 Bezugsquellen = 37,50 € lmi-Anteil je Bezugsquelle. Umgelegter lmn-Anteil: 12,50 €. Vollständiger Satz: <b>50,00 € je Bezugsquelle</b>.</p>
 <p>Die Kosten mehrerer Teilprozesse können anschließend entsprechend ihrer Prozesskoeffizienten zu einem Hauptprozesskostensatz zusammengefasst werden. Laut Lösung des Arbeitsblatts betragen die Hauptprozesskostensätze für die Materialbeschaffung je Auftrag: <b>Typ A 918,64 €</b>, <b>Typ B 1.379,79 €</b> und <b>Typ C 1.849,02 €</b>.</p>
 </div>
-<h3>Übungen zur Prozesskostenrechnung</h3><div id="processExerciseList"></div>
+
 </section>
 <section id="targetcosting" class="hidden">
 <h2>Target Costing – Zielkostenrechnung</h2>
@@ -130,7 +140,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><span class="tag">Kostensenkung</span><h3>Standardkosten vergleichen</h3><p><b>Kostensenkungsvolumen = Standard-Selbstkosten − Zielkosten.</b> Ist das Ergebnis positiv, müssen die Kosten um diesen Betrag gesenkt werden. Sind die Standard-Selbstkosten bereits niedriger als die Zielkosten, besteht aus dieser Rechnung kein Kostensenkungsbedarf.</p></div>
 <div class="card"><span class="tag">Merke</span><h3>Wann wird es eingesetzt?</h3><p>Target Costing wird früh in der Produktentwicklung eingesetzt, wenn Verkaufspreis und Ausstattung stark durch Kundenwünsche und Wettbewerb vorgegeben sind. Ziel ist, Kosten von Anfang an passend zu gestalten, statt erst am fertigen Produkt zu sparen.</p></div>
 </div>
-<h3>Übungen zu Target Costing</h3><div id="targetExerciseList"></div>
+
 </section>
 <section id="plankosten" class="hidden">
 <h2>Plankostenrechnung</h2>
@@ -143,7 +153,7 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><span class="tag">Formel 4</span><h3>Abweichungen</h3><p class="formula"><b>Beschäftigungsabweichung = verrechnete Plankosten − Sollkosten</b></p><p class="formula"><b>Verbrauchsabweichung = Sollkosten − Istkosten</b></p><p>Wir verwenden die Vorzeichenkonvention aus deinem Lösungsmaterial. Für die Interpretation muss deshalb immer geprüft werden, welche Größe von welcher abgezogen wird.</p></div>
 <div class="card"><span class="tag">Durchgerechnetes Beispiel</span><h3>Montage von DVD-Playern</h3><p>Basisplankosten: 596.000 €, davon 258.700 € fix und 337.300 € variabel. Planbeschäftigung: 10.000 Stück.</p><ul><li>Bei 80 % Beschäftigung (8.000 Stück): Sollkosten = 258.700 € + 337.300 € × 0,8 = <b>528.540 €</b>.</li><li>Verrechnete Plankosten: 8.000 × 59,60 € = <b>476.800 €</b>.</li><li>Beschäftigungsabweichung: 476.800 € − 528.540 € = <b>−51.740 €</b>.</li></ul></div>
 </div>
-<h3>Übungen zur Plankostenrechnung</h3><div id="planExerciseList"></div>
+
 </section>
 
 <section id="vollkosten" class="hidden">
@@ -158,14 +168,14 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <div class="card"><span class="tag">6 · Über- und Unterdeckung</span><h3>Ist- und Normalkosten vergleichen</h3><p>Ist-Zuschlagssätze schwanken beispielsweise durch Beschäftigung, Reparaturen oder Preisänderungen. Normal-Zuschlagssätze beruhen auf einem längeren Zeitraum.</p><p><b>Unterdeckung:</b> Ist-Gemeinkosten liegen über den verrechneten Normal-Gemeinkosten. <b>Überdeckung:</b> Ist-Gemeinkosten liegen darunter.</p><p class="formula"><b>Abweichung = Ist-Gemeinkosten − Normal-Gemeinkosten</b></p></div>
 </div>
 <div class="card" style="margin-top:16px"><span class="tag">Merkschema BAB</span><h3>So gehst du vor</h3><ol><li>Gemeinkostenarten und Gesamtbeträge erfassen.</li><li>Passende Verteilungsschlüssel anwenden und Kosten auf Kostenstellen verteilen.</li><li>Allgemeine und Hilfskostenstellen umlegen.</li><li>Endsummen der Hauptkostenstellen kontrollieren.</li><li>Zuschlagssätze mit den richtigen Bezugsgrößen berechnen.</li><li>Gemeinkosten in Kalkulation und Ergebnistabelle übernehmen.</li></ol></div>
-<h3>Übungen zur Vollkostenrechnung</h3><div id="vollExerciseList"></div>
+
 </section>
-<section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
+<section id="uebungen" class="hidden"><h2>Alle Übungen</h2><p class="muted">Die Aufgaben sind nach Lernbereich geordnet: zuerst Teilkostenrechnung, danach Prozesskostenrechnung, Target Costing, Plankostenrechnung und Vollkostenrechnung. Öffne nach jeder Aufgabe „Kontrollieren“, um die Lösung und den Rechenweg zu sehen.</p><div id="exerciseList"></div></section>
 <section id="bericht" class="hidden">
 <div class="card"><h2>Dein Lernbericht</h2><p id="reportText">Noch keine Aufgaben bearbeitet.</p><div id="topicReport"></div><div class="controls"><button class="reset" id="resetBtn">Fortschritt zurücksetzen</button></div></div>
 </section>
 </main>
-<div class="footer">Teilkosten-Trainer · Lernstand lokal auf dem Gerät gespeichert</div>
+<div class="footer">Kostenrechnung · Lernstand lokal auf dem Gerät gespeichert</div>
 <script>
 const exercises=[
 {id:1,level:'Basis',topic:'Deckungsbeitrag',q:'Ein Produkt wird für 10,50 € verkauft. Die variablen Stückkosten betragen 4,20 €. Wie hoch ist der Stückdeckungsbeitrag?',type:'num',ans:6.30,unit:'€',exp:'Stück-DB = Verkaufspreis − variable Stückkosten = 10,50 € − 4,20 € = 6,30 €.'},
@@ -270,7 +280,7 @@ const exercises=[
 {id:96,level:'Basis',topic:'Vollkostenrechnung – Über-/Unterdeckung',q:'Die Ist-Gemeinkosten betragen 9.200 €, die verrechneten Normal-Gemeinkosten 8.000 €. Wie hoch ist die Abweichung und handelt es sich um Über- oder Unterdeckung?',type:'mc',opts:['1.200 € Überdeckung','1.200 € Unterdeckung','1.200 € Gewinn','Keine Abweichung'],ans:1,exp:'Abweichung = Ist-Gemeinkosten − Normal-Gemeinkosten = 9.200 − 8.000 = 1.200 €. Die Istkosten liegen über den verrechneten Normalkosten: Es liegt eine Unterdeckung vor.'}
 
 ];
-const STORAGE_KEY='teilkostenTrainerV6'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+const STORAGE_KEY='kostenrechnungTrainerV7'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));updateProgress()}
 function updateProgress(){
  const done=Object.values(state).filter(v=>v&&v.done).length;
@@ -280,10 +290,11 @@ function updateProgress(){
 }
 function fmt(v){return new Intl.NumberFormat('de-DE',{maximumFractionDigits:2}).format(v)}
 function render(){
- ['exerciseList','processExerciseList','targetExerciseList','planExerciseList','vollExerciseList'].forEach(id=>document.getElementById(id).innerHTML='');
+ document.getElementById('exerciseList').innerHTML=''; let lastGroup='';
  exercises.forEach(e=>{
-  const rootId=e.topic.startsWith('Prozesskostenrechnung')?'processExerciseList':e.topic==='Target Costing'?'targetExerciseList':e.topic.startsWith('Plankostenrechnung')?'planExerciseList':e.topic.startsWith('Vollkostenrechnung')?'vollExerciseList':'exerciseList';
-  const root=document.getElementById(rootId);
+  const group=e.id<=34?'Teilkostenrechnung':e.id<=58?'Prozesskostenrechnung':e.id<=63?'Target Costing':e.id<=81?'Plankostenrechnung':'Vollkostenrechnung';
+  const root=document.getElementById('exerciseList');
+  if(group!==lastGroup){const heading=document.createElement('h2');heading.textContent=group;heading.style.marginTop='28px';root.appendChild(heading);lastGroup=group;}
   const box=document.createElement('div');box.className='card exercise';
   let input='';
   if(e.type==='num') input='<input type="number" step="any" class="userAnswer" placeholder="Deine Antwort">';
