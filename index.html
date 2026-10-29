@@ -36,6 +36,8 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 <button class="navbtn" data-section="formeln">Formeln</button>
 <button class="navbtn" data-section="graphen">Graphenanalyse</button>
 <button class="navbtn" data-section="prozesskosten">Prozesskosten</button>
+<button class="navbtn" data-section="targetcosting">Target Costing</button>
+<button class="navbtn" data-section="plankosten">Plankosten</button>
 <button class="navbtn" data-section="uebungen">Übungen</button>
 <button class="navbtn" data-section="bericht">Lernbericht</button>
 </div></nav>
@@ -116,6 +118,32 @@ small,.muted{color:var(--muted)} .reportbar{margin-top:8px}
 </div>
 <h3>Übungen zur Prozesskostenrechnung</h3><div id="processExerciseList"></div>
 </section>
+<section id="targetcosting" class="hidden">
+<h2>Target Costing – Zielkostenrechnung</h2>
+<p class="muted">Die Zusammenfassung aus deinem Unterricht behandelt Target Costing als marktorientierte Kostenplanung in der Produktentwicklung. Der Markt gibt Preis und wesentliche Produktmerkmale vor; das Unternehmen plant rückwärts, welche Kosten höchstens entstehen dürfen.</p>
+<div class="grid grid2">
+<div class="card"><span class="tag">Grundidee</span><h3>Vom Markt zu den Kosten</h3><p>Bei einem Käufermarkt kann das Unternehmen den Verkaufspreis nicht einfach aus den eigenen Kosten ableiten. Stattdessen wird zunächst ermittelt, welchen Preis Kundinnen und Kunden akzeptieren. Danach werden die erlaubten Kosten geplant.</p><p><b>Merksatz:</b> Nicht „Was kostet das Produkt und welchen Preis setzen wir an?“, sondern „Welchen Preis akzeptiert der Markt und welche Kosten dürfen wir uns leisten?“</p></div>
+<div class="card"><span class="tag">Ablauf</span><h3>In vier Schritten</h3><ol><li>Marktpreis und Kundenanforderungen ermitteln.</li><li>Gewünschten Gewinn festlegen.</li><li>Zielkosten berechnen: Zielerlös minus Zielgewinn.</li><li>Geplante bzw. Standard-Selbstkosten mit den Zielkosten vergleichen und nötige Kostensenkungen planen.</li></ol></div>
+<div class="card"><span class="tag">Formel</span><h3>Zielkosten</h3><p class="formula"><b>Zielkosten = Zielerlös − Zielgewinn</b></p><p>Wenn Skonto branchenüblich ist, muss es bei der Ermittlung des tatsächlich erwarteten Erlöses berücksichtigt werden.</p></div>
+<div class="card"><span class="tag">Beispiel aus dem Material</span><h3>Kleinwagen</h3><p>Die Marktforschung ergibt einen maximal akzeptierten Verkaufspreis von 10.000 €. Im Material werden außerdem 3 % Skonto genannt.</p><p>Erlös nach 3 % Skonto: 10.000 € × 97 % = <b>9.700 €</b>.</p><p>Für die endgültigen Zielkosten braucht man zusätzlich den vorgegebenen Zielgewinn. Beispielhaft bei 1.200 € Zielgewinn: 9.700 € − 1.200 € = <b>8.500 € Zielkosten</b>. Der Zielgewinn von 1.200 € ist eine zusätzliche Übungsannahme, nicht eine Angabe aus dem Kleinwagenbeispiel.</p></div>
+<div class="card"><span class="tag">Kostensenkung</span><h3>Standardkosten vergleichen</h3><p><b>Kostensenkungsvolumen = Standard-Selbstkosten − Zielkosten.</b> Ist das Ergebnis positiv, müssen die Kosten um diesen Betrag gesenkt werden. Sind die Standard-Selbstkosten bereits niedriger als die Zielkosten, besteht aus dieser Rechnung kein Kostensenkungsbedarf.</p></div>
+<div class="card"><span class="tag">Merke</span><h3>Wann wird es eingesetzt?</h3><p>Target Costing wird früh in der Produktentwicklung eingesetzt, wenn Verkaufspreis und Ausstattung stark durch Kundenwünsche und Wettbewerb vorgegeben sind. Ziel ist, Kosten von Anfang an passend zu gestalten, statt erst am fertigen Produkt zu sparen.</p></div>
+</div>
+<h3>Übungen zu Target Costing</h3><div id="targetExerciseList"></div>
+</section>
+<section id="plankosten" class="hidden">
+<h2>Plankostenrechnung</h2>
+<p class="muted">Die LF-8-Unterlagen behandeln Kostenplanung, Plankalkulation und Kostenkontrolle. Im Mittelpunkt stehen fixe und variable Plankosten, Sollkosten, verrechnete Plankosten sowie Beschäftigungs- und Verbrauchsabweichung.</p>
+<div class="grid grid2">
+<div class="card"><span class="tag">Wozu?</span><h3>Planen und kontrollieren</h3><p>Die Plankostenrechnung legt erwartete Kosten für eine Planbeschäftigung fest. Später werden die tatsächlichen Kosten und die tatsächliche Beschäftigung untersucht, damit Kostenabweichungen erkannt und ihre Ursachen analysiert werden können.</p></div>
+<div class="card"><span class="tag">Formel 1</span><h3>Plankostenverrechnungssatz</h3><p class="formula"><b>Plankostenverrechnungssatz = gesamte Plankosten ÷ Planbeschäftigung</b></p><p>Beispiel aus dem Material: 596.000 € ÷ 10.000 Stück = <b>59,60 € je Stück</b>.</p></div>
+<div class="card"><span class="tag">Formel 2</span><h3>Sollkosten bei flexibler Plankostenrechnung</h3><p class="formula"><b>Sollkosten = fixe Plankosten + variable Plankosten × Istbeschäftigung ÷ Planbeschäftigung</b></p><p>Fixkosten bleiben für den betrachteten Beschäftigungsbereich konstant; variable Kosten werden an die tatsächliche Beschäftigung angepasst.</p></div>
+<div class="card"><span class="tag">Formel 3</span><h3>Verrechnete Plankosten</h3><p class="formula"><b>Verrechnete Plankosten = Plankostenverrechnungssatz × Istbeschäftigung</b></p><p>Bei 59,60 € je Stück und 8.000 Stück: 59,60 € × 8.000 = <b>476.800 €</b>.</p></div>
+<div class="card"><span class="tag">Formel 4</span><h3>Abweichungen</h3><p class="formula"><b>Beschäftigungsabweichung = verrechnete Plankosten − Sollkosten</b></p><p class="formula"><b>Verbrauchsabweichung = Sollkosten − Istkosten</b></p><p>Wir verwenden die Vorzeichenkonvention aus deinem Lösungsmaterial. Für die Interpretation muss deshalb immer geprüft werden, welche Größe von welcher abgezogen wird.</p></div>
+<div class="card"><span class="tag">Durchgerechnetes Beispiel</span><h3>Montage von DVD-Playern</h3><p>Basisplankosten: 596.000 €, davon 258.700 € fix und 337.300 € variabel. Planbeschäftigung: 10.000 Stück.</p><ul><li>Bei 80 % Beschäftigung (8.000 Stück): Sollkosten = 258.700 € + 337.300 € × 0,8 = <b>528.540 €</b>.</li><li>Verrechnete Plankosten: 8.000 × 59,60 € = <b>476.800 €</b>.</li><li>Beschäftigungsabweichung: 476.800 € − 528.540 € = <b>−51.740 €</b>.</li></ul></div>
+</div>
+<h3>Übungen zur Plankostenrechnung</h3><div id="planExerciseList"></div>
+</section>
 <section id="uebungen" class="hidden"><h2>Übungen</h2><div id="exerciseList"></div></section>
 <section id="bericht" class="hidden">
 <div class="card"><h2>Dein Lernbericht</h2><p id="reportText">Noch keine Aufgaben bearbeitet.</p><div id="topicReport"></div><div class="controls"><button class="reset" id="resetBtn">Fortschritt zurücksetzen</button></div></div>
@@ -184,8 +212,21 @@ const exercises=[
 {id:57,level:'Prüfung',topic:'Prozesskostenrechnung – Hauptprozesse',q:'Warum ist der Hauptprozesskostensatz für Typ C höher als für Typ A?',type:'mc',opts:['Typ C beansprucht laut Prozesskoeffizienten bei mehreren Teilprozessen mehr Prozessleistungen.','Typ C hat immer einen höheren Verkaufspreis.','Die lmn-Kosten werden bei Typ C nicht berücksichtigt.','Die Prozesskostenrechnung ignoriert die Prozessmenge.'],ans:0,exp:'Die Prozesskoeffizienten zeigen, wie viele Teilprozessleistungen ein Auftrag benötigt. Typ C beansprucht in mehreren Zeilen mehr Leistungen, dadurch ist sein Hauptprozesskostensatz höher.'},
 {id:58,level:'Prüfung',topic:'Prozesskostenrechnung – Hauptprozesse',q:'Ein Auftrag verursacht 4 Hauptprozesse vom Typ A. Bei 918,64 € je Auftrag: Wie hoch sind die zugeordneten Hauptprozesskosten?',type:'num',ans:3674.56,unit:'€',exp:'4 Aufträge × 918,64 € je Auftrag = 3.674,56 €.'}
 
+,{id:59,level:'Basis',topic:'Target Costing',q:'Was ist die Grundidee des Target Costing?',type:'mc',opts:['Der Marktpreis wird ermittelt und daraus werden die erlaubten Kosten abgeleitet.','Der Verkaufspreis wird immer durch einen Kostenaufschlag bestimmt.','Es werden nur die bereits entstandenen Istkosten betrachtet.','Die Fixkosten werden vollständig ignoriert.'],ans:0,exp:'Target Costing ist marktorientiert: Erst werden Marktpreis und Kundenanforderungen ermittelt, dann werden die maximal erlaubten Kosten geplant.'},
+{id:60,level:'Basis',topic:'Target Costing',q:'Der maximal akzeptierte Verkaufspreis beträgt 10.000 €. Kundinnen und Kunden nutzen 3 % Skonto. Wie hoch ist der Erlös nach Skonto?',type:'num',ans:9700,unit:'€',exp:'Skonto = 10.000 € × 3 % = 300 €. Erlös nach Skonto = 10.000 € − 300 € = 9.700 €.'},
+{id:61,level:'Aufbau',topic:'Target Costing',q:'Der Zielerlös beträgt 9.700 €, der Zielgewinn 1.200 €. Wie hoch sind die Zielkosten?',type:'num',ans:8500,unit:'€',exp:'Zielkosten = Zielerlös − Zielgewinn = 9.700 € − 1.200 € = 8.500 €.'},
+{id:62,level:'Aufbau',topic:'Target Costing',q:'Die Standard-Selbstkosten betragen 9.100 €, die Zielkosten 8.500 €. Wie hoch ist das Kostensenkungsvolumen?',type:'num',ans:600,unit:'€',exp:'Kostensenkungsvolumen = Standard-Selbstkosten − Zielkosten = 9.100 € − 8.500 € = 600 €.'},
+{id:63,level:'Prüfung',topic:'Target Costing',q:'Wann ist Target Costing besonders sinnvoll?',type:'mc',opts:['Wenn Marktpreis und wesentliche Produktmerkmale durch Kunden und Wettbewerb vorgegeben sind.','Erst wenn ein Produkt bereits lange hergestellt wird und keine Änderungen mehr möglich sind.','Nur wenn es keinen Wettbewerb gibt.','Wenn Verkaufspreise unabhängig vom Markt festgelegt werden können.'],ans:0,exp:'Das Material empfiehlt Target Costing besonders früh in der Produktentwicklung in einem Käufermarkt, in dem Kunden und Wettbewerb den Preis stark bestimmen.'},
+{id:64,level:'Basis',topic:'Plankostenrechnung',q:'Welche drei Bereiche nennt das Unterrichtsmaterial zur Plankostenrechnung?',type:'mc',opts:['Kostenplanung, Plankalkulation und Kostenkontrolle','Einkauf, Verkauf und Werbung','Material, Lager und Versand','Umsatz, Gewinn und Steuer'],ans:0,exp:'Das Lösungsmaterial unterscheidet Kostenplanung, Plankalkulation und Kostenkontrolle.'},
+{id:65,level:'Basis',topic:'Plankostenrechnung',q:'Die gesamten Plankosten betragen 596.000 €, die Planbeschäftigung 10.000 Stück. Wie hoch ist der Plankostenverrechnungssatz?',type:'num',ans:59.6,unit:'€ je Stück',exp:'596.000 € ÷ 10.000 Stück = 59,60 € je Stück.'},
+{id:66,level:'Aufbau',topic:'Plankostenrechnung',q:'Fixe Plankosten: 258.700 €. Variable Plankosten: 337.300 €. Planbeschäftigung: 10.000 Stück. Istbeschäftigung: 8.000 Stück. Wie hoch sind die Sollkosten?',type:'num',ans:528540,unit:'€',exp:'Sollkosten = fixe Plankosten + variable Plankosten × Istbeschäftigung ÷ Planbeschäftigung = 258.700 € + 337.300 € × 8.000 ÷ 10.000 = 528.540 €.'},
+{id:67,level:'Aufbau',topic:'Plankostenrechnung',q:'Der Plankostenverrechnungssatz beträgt 59,60 € je Stück. Die Istbeschäftigung liegt bei 8.000 Stück. Wie hoch sind die verrechneten Plankosten?',type:'num',ans:476800,unit:'€',exp:'Verrechnete Plankosten = 59,60 € × 8.000 Stück = 476.800 €.'},
+{id:68,level:'Prüfung',topic:'Plankostenrechnung',q:'Sollkosten betragen 528.540 €, verrechnete Plankosten 476.800 €. Berechne die Beschäftigungsabweichung nach der Formel aus dem Material.',type:'num',ans:-51740,unit:'€',exp:'Beschäftigungsabweichung = verrechnete Plankosten − Sollkosten = 476.800 € − 528.540 € = −51.740 €.'},
+{id:69,level:'Aufbau',topic:'Plankostenrechnung',q:'Sollkosten betragen 528.540 €, Istkosten 540.000 €. Wie hoch ist die Verbrauchsabweichung nach der Formel aus dem Material?',type:'num',ans:-11460,unit:'€',exp:'Verbrauchsabweichung = Sollkosten − Istkosten = 528.540 € − 540.000 € = −11.460 €. Die Istkosten liegen damit 11.460 € über den Sollkosten.'},
+{id:70,level:'Prüfung',topic:'Plankostenrechnung',q:'Welche Kostenbestandteile werden in der flexiblen Plankostenrechnung bei der Berechnung der Sollkosten an die Istbeschäftigung angepasst?',type:'mc',opts:['Die variablen Plankosten; die fixen Plankosten bleiben im betrachteten Bereich konstant.','Nur die fixen Plankosten.','Fixe und variable Plankosten werden immer vollständig unverändert übernommen.','Nur die Istkosten.'],ans:0,exp:'Die variablen Plankosten werden proportional an die Istbeschäftigung angepasst; die fixen Plankosten bleiben in diesem Modell konstant.'}
+
 ];
-const STORAGE_KEY='teilkostenTrainerV3'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
+const STORAGE_KEY='teilkostenTrainerV4'; const state=JSON.parse(localStorage.getItem(STORAGE_KEY)||'{}');
 function save(){localStorage.setItem(STORAGE_KEY,JSON.stringify(state));updateProgress()}
 function updateProgress(){
  const done=Object.values(state).filter(v=>v&&v.done).length;
@@ -195,9 +236,10 @@ function updateProgress(){
 }
 function fmt(v){return new Intl.NumberFormat('de-DE',{maximumFractionDigits:2}).format(v)}
 function render(){
- document.getElementById('exerciseList').innerHTML='';document.getElementById('processExerciseList').innerHTML='';
+ ['exerciseList','processExerciseList','targetExerciseList','planExerciseList'].forEach(id=>document.getElementById(id).innerHTML='');
  exercises.forEach(e=>{
-  const root=document.getElementById(e.topic==='Prozesskostenrechnung'?'processExerciseList':'exerciseList');
+  const rootId=e.topic.startsWith('Prozesskostenrechnung')?'processExerciseList':e.topic==='Target Costing'?'targetExerciseList':e.topic==='Plankostenrechnung'?'planExerciseList':'exerciseList';
+  const root=document.getElementById(rootId);
   const box=document.createElement('div');box.className='card exercise';
   let input='';
   if(e.type==='num') input='<input type="number" step="any" class="userAnswer" placeholder="Deine Antwort">';
